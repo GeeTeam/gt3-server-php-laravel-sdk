@@ -53,7 +53,7 @@ class GeetestLib
      */
     private function requestRegister($params)
     {
-        $params = array_merge($params, ["gt" => $this->geetest_id, "json_format" => self::JSON_FORMAT]);
+        $params = array_merge($params, ["gt" => $this->geetest_id, "sdk" => self::VERSION, "json_format" => self::JSON_FORMAT]);
         $register_url = self::API_URL . self::REGISTER_URL;
         $this->gtlog(
             sprintf("requestRegister(): 验证初始化, 向极验发送请求, url=%s, params=%s.", $register_url, json_encode($params))
